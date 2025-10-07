@@ -18,6 +18,11 @@ app.get('/home', (req,res) => {
 });
 
 
+app.get('/error', (req, res) => {
+  throw new Error("This is a test server error");
+});
+
+
 /*
 Add error handling middleware to handle below error
 - Return 500 page with message "Server Error"
